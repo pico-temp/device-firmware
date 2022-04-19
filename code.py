@@ -16,7 +16,7 @@ temperature = DS18X20(ow_bus, ow_bus.scan()[0])
 
 # Display Setup
 i2c = busio.I2C(sda=board.GP0, scl=board.GP1)
-display = adafruit_ssd1306.SSD1306_I2C(27, 27, i2c)
+display = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c, addr=0x3d)
 def displayTemperatureEdit(temp):
 	display.fill(0)
 	display.text("Temperature: " + str(float(temp)) + "°C")
