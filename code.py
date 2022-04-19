@@ -11,7 +11,7 @@ progIndicator = digitalio.DigitalInOut(board.LED)
 progIndicator.direction = digitalio.Direction.OUTPUT
 
 # Temperature Setup
-ow_bus = OneWireBus(board.D2)
+ow_bus = OneWireBus(board.GP5)
 temperature = DS18X20(ow_bus, ow_bus.scan()[0])
 
 # Display Setup
